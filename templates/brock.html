@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,tr,td,th{
+            border: 3px solid green;
+        }
+        body{
+            background-color: aqua;
+            color: black;
+        }
+    </style>
+</head>
+<body><center>
+    <h1>this student table </h1>
+    <table >
+        <tr>
+            <th>student_ID</th>
+            <th>Name</th>
+            <th>S_class</th>
+            <th>S_father</th>
+            <th>s_marks</th>
+        </tr>
+        {% for i in H %}
+          <tr>
+            <td>
+                {{i.s_id}}
+            </td>
+            <td>
+                {{i.s_name}}
+            </td>
+            <td>{{i.s_class}}</td>
+            <td>{{i.s_fa}}</td>
+            <td>{{i.s_marks}}</td>
+          </tr>
+          {% endfor %}
+    </table>
+</center>
+    
+</body>
+</html>
